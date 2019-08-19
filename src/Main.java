@@ -1,4 +1,5 @@
 import java8Interface.ExponentialInterface;
+import java8Interface.TestInterface;
 
 import java.util.*;
 
@@ -21,6 +22,10 @@ public class Main implements ExponentialInterface {
             iterator.set(iterator.next()+1);
         }
         collectionOfIntegers.forEach(i -> System.out.println(i));
+
+        //lambda
+        TestInterface testInterface = (int x) -> System.out.println(x);
+        testInterface.subtract(6);
     }
 
 

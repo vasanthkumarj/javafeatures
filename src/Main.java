@@ -24,8 +24,25 @@ public class Main implements ExponentialInterface {
         collectionOfIntegers.forEach(i -> System.out.println(i));
 
         //lambda
-        TestInterface testInterface = (int x) -> System.out.println(x);
-        testInterface.subtract(6);
+//        TestInterface testInterface = (int x) -> System.out.println(x);
+//        testInterface.subtract(6);
+        System.out.println("----------------------");
+//        TestInterface testInterface1= (int a,int b) -> b!=0? a/b : b ;
+//        System.out.println(testInterface1.safeDivide(1,0));
+
+        TestInterface testInterface2 = new TestInterface() {
+            @Override
+            public void subtract(int a) {
+                System.out.println(a);
+            }
+
+            @Override
+            public int safeDivide(int a, int b) {
+                return a+b;
+            }
+        };
+
+        testInterface2.subtract(10);
     }
 
 
